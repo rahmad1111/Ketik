@@ -17,3 +17,5 @@ val Peach = Color(0xFFF8A488)
 val Teal = Color(0xFF5AA897)
 
 val Navy = Color(0xFF45526C)
+
+val ungu = Color(0xFF45526C)
