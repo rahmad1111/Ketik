@@ -19,7 +19,6 @@ fun Tes() {
 
     Column {
         Image(size = 130)
-        Text(conten = "fix", tipefont = Inter, horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.Center)
         TextField(
             value = logiclogin.email.value,
             onValueChange = { logiclogin.email.value = it },
