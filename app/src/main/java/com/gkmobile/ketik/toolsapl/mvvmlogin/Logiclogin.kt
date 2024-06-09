@@ -1,19 +1,10 @@
-package com.gkmobile.ketik.logindanregister
+package com.gkmobile.ketik.toolsapl.mvvmlogin
 
 import android.content.Context
 import android.widget.Toast
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.input.TextFieldValue
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-// Mvvm
+
 class Logiclogin : ViewModel(){
     var email = mutableStateOf("")
     var password = mutableStateOf("")
