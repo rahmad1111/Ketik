@@ -25,6 +25,7 @@ fun ButtonCostum(
     onClick:()->Unit,
     textcolor:Color,
     backgroundcolor:Color,
+    shape:Int,
     widht:Int,
     height:Int
 ) {
@@ -38,7 +39,7 @@ fun ButtonCostum(
                 containerColor = backgroundcolor,
                 contentColor = textcolor,
             ),
-            shape = RoundedCornerShape(10.dp),
+            shape = RoundedCornerShape(shape.dp),
             border = BorderStroke(1.dp, Biru),
             modifier = Modifier
                 .width(widht.dp)
@@ -53,10 +54,11 @@ fun ButtonCostum(
 @Composable
 private fun PreviewButtonCostum() {
     ButtonCostum(
-        conten = "Tes",
+        conten = "Example",
         onClick = {/*isi mau kemana*/},
         textcolor = Biru,
         backgroundcolor = Putih,
+        shape = 10,
         widht = 100,
         height = 50
     )

@@ -1,10 +1,10 @@
-package com.gkmobile.ketik.toolsapl.datastorepreferences
+package com.gkmobile.ketik.sdaplikasi.datastorepreferences
 
 import android.content.Context
-import com.gkmobile.ketik.toolsapl.datastorepreferences.PreferencesKey.EMAIL
-import com.gkmobile.ketik.toolsapl.datastorepreferences.PreferencesKey.KATA_SANDI
-import com.gkmobile.ketik.toolsapl.datastorepreferences.PreferencesKey.NAMA_LENGKAP
-import com.gkmobile.ketik.toolsapl.datastorepreferences.PreferencesKey.NAMA_PREF
+import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.EMAIL
+import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.KATA_SANDI
+import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.NAMA_LENGKAP
+import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.NAMA_PREF
 
 class SharedPreferencesManager(context: Context) {
     private val preferences = context.getSharedPreferences(NAMA_PREF, Context.MODE_PRIVATE)

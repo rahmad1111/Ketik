@@ -1,4 +1,4 @@
-package com.gkmobile.ketik.toolsapl.datastorepreferences
+package com.gkmobile.ketik.sdaplikasi.datastorepreferences
 
 object PreferencesKey {
     const val NAMA_PREF = "login_preferences"

@@ -45,6 +45,7 @@ fun TextFieldPassword(
             painterResource(id = R.drawable.on_eye)
         else
             painterResource(id = R.drawable.off_eye)
+
         OutlinedTextField(
             value = value,
             onValueChange = onValueChange,
