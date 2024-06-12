@@ -77,12 +77,13 @@ fun TextFieldPassword(
 @Preview(showBackground = true)
 @Composable
 private fun PreviewTextFieldPassword() {
-    var nama by remember {
-        mutableStateOf("")
-    }
+//    var nama by remember {
+//        mutableStateOf("")
+//    }
     TextFieldPassword(
-        value = nama,
-        onValueChange = {nama = it},
+        value = "nama",
+        onValueChange = {},
         label = "",
-        keyboardType = KeyboardType.Password)
+        keyboardType = KeyboardType.Password
+    )
 }

@@ -51,12 +51,12 @@ fun TextFieldBiasa(
 @Preview(showBackground = true)
 @Composable
 private fun PreviewTextField() {
-    var nama by remember {
-        mutableStateOf("")
-    }
+//    var nama by remember {
+//        mutableStateOf("")
+//    }
     TextFieldBiasa(
-        value = nama,
-        onValueChange = {nama = it},
+        value = "nama",
+        onValueChange = {},
         label = "Pasword",
         keyboardType = KeyboardType.Password
     )

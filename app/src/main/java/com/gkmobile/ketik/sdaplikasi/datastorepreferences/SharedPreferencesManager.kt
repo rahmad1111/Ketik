@@ -29,3 +29,28 @@ class SharedPreferencesManager(context: Context) {
             editor.commit()
         }
 }
+
+// cara ambil ke ui
+// val sharedPreferencesManager = remember {
+//        SharedPreferencesManager(context)
+//    }
+// val name = sharedPreferencesManager.name ?: ""
+
+
+// cara untuk simpan ke sharepreferences
+// onLoginClick = {
+//            if (name.isBlank() || password.isBlank()){
+//                Toast.makeText(context, "Nama dan Password Wajib Diisi", Toast.LENGTH_SHORT).show()
+//            } else {
+//                sharedPreferencesManager.name = name
+//                sharedPreferencesManager.password = password
+//                coroutineScope.launch {
+//                    dataStore.saveStatus(true)
+//                }
+//                navController.navigate(Screen.Home.route) {
+//                    popUpTo(Screen.Login.route) {
+//                        inclusive = true
+//                    }
+//                }
+//            }
+//        },
