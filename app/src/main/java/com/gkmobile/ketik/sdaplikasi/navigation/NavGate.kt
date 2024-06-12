@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.gkmobile.ketik.homepage.HomePage
 import com.gkmobile.ketik.logindanregister.LoginPage
 import com.gkmobile.ketik.sdaplikasi.navigation.dataroute.Navigasi
 import com.gkmobile.ketik.splasscreen.mainanimate.AnimateSplash
@@ -22,6 +23,10 @@ fun NavGate() {
 
         composable(route = Navigasi.Login.route){
             LoginPage()
+        }
+
+        composable(route = Navigasi.HomeScreen.route){
+            HomePage(rememberNavController())
         }
     }
 }
