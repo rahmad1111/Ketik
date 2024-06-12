@@ -110,13 +110,13 @@ fun TextFieldHome(
 @Preview
 @Composable
 private fun PreviewTextFieldHome() {
-    var pencarian by remember {
-        mutableStateOf("")
-    }
+//    var pencarian by remember {
+//        mutableStateOf("")
+//    }
     TextFieldHome(
         conten = "pencarian",
-        value = pencarian,
-        onValueChange = {pencarian = it},
+        value = "pencarian",
+        onValueChange = {},
         colortext = Biru
     )
 }
