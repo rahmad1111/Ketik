@@ -97,13 +97,13 @@ fun TextFieldCatatan(
 @Preview
 @Composable
 private fun PreviewTextFieldHome() {
-    var pencarian by remember {
-        mutableStateOf("")
-    }
+//    var pencarian by remember {
+//        mutableStateOf("")
+//    }
     TextFieldCatatan(
         conten = "pencarian",
-        value = pencarian,
-        onValueChange = {pencarian = it},
+        value = "pencarian",
+        onValueChange = {},
         colortext = Abu_abu_gelap
     )
 }
