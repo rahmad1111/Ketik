@@ -6,10 +6,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,8 +32,7 @@ fun HeaderCustom(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 17.dp, end = 19.dp, top = 10.dp, bottom = 10.dp)
-            .height(36.dp),
+            .padding(start = 17.dp, end = 19.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
@@ -43,22 +40,22 @@ fun HeaderCustom(
             modifier = Modifier.clickable { onClickdepan() },
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Image(painter = painterResource(id = R.drawable.back), contentDescription = "back", modifier = Modifier.size(width = 12.dp, height = 12.dp))
-            Spacer(modifier = Modifier.size(3.dp).width(3.dp))
-            Text(text = textdepan, fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            Image(painter = painterResource(id = R.drawable.back), contentDescription = "back", modifier = Modifier.size(width = 7.dp, height = 8.dp))
+            Spacer(modifier = Modifier.size(3.dp))
+            Text(text = textdepan, fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 13.sp)
         }
         Row {
-            Text(text = texttengah, fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 23.sp, color = Biru)
+            Text(text = texttengah, fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Biru)
         }
         Row {
-            Text(text = textbelakang, fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.clickable { onClickbelakang() })
+            Text(text = textbelakang, fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 13.sp, modifier = Modifier.clickable { onClickbelakang() })
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-private fun Preview() {
+private fun HeaderPreview() {
     HeaderCustom(
         textdepan = "Example",
         onClickdepan = {},
