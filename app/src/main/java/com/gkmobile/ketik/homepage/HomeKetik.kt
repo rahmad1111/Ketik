@@ -1,5 +1,6 @@
 package com.gkmobile.ketik.homepage
 
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,41 +22,41 @@ import com.gkmobile.ketik.ui.theme.Inter
 
 
 @Composable
- fun HomePage(
- navController: NavHostController
- ) {
- Row(
-  modifier = Modifier.fillMaxSize()
-   .padding(start = 220.dp, top = 50.dp, end = 0.dp, bottom = 8.dp)
- ){
+fun HomeKetik(
+    navController: NavHostController
+) {
+    Row(
+        modifier = Modifier.fillMaxSize()
+            .padding(start = 220.dp, top = 50.dp, end = 0.dp, bottom = 8.dp)
+    ){
 
-  ImageCustom(
-    painter = R.drawable.vector,
-    size = 32
-   )
-  }
+        ImageCustom(
+            painter = R.drawable.vector,
+            size = 32
+        )
+    }
 
 
 
-Column {
- Text(text = "Hi,",  fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 21.sp, color = Biru)
- Text(text = "Prabroro!",  fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 21.sp, color = Biru)
+    Column {
+        Text(text = "Hi,",  fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 21.sp, color = Biru)
+        Text(text = "Prabroro!",  fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 21.sp, color = Biru)
+    }
+
+
+
+
+    Row{
+        Text(text = "Folder", fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Hitam)
+        Text(text = "Edit", fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Hitam)
+
+    }
+    ImageCustom(
+        painter = R.drawable.rectangle_4611,
+        size = 350)
+
+
 }
-
-
-
-
- Row{
-Text(text = "Folder", fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Hitam)
-  Text(text = "Edit", fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Hitam)
-
-  }
- ImageCustom(
-  painter = R.drawable.rectangle_4611,
-  size = 350)
-
-
- }
 
 
 
@@ -68,5 +69,5 @@ Text(text = "Folder", fontFamily = Inter, fontWeight = FontWeight.Bold, fontSize
 @Preview(showBackground = true)
 @Composable
 private fun PreviewHomePage(){
- HomePage(navController = rememberNavController())
+    HomeKetik(navController = rememberNavController())
 }
