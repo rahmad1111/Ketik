@@ -1,4 +1,4 @@
-package com.gkmobile.ketik.akun
+package com.gkmobile.ketik.akun.componen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height

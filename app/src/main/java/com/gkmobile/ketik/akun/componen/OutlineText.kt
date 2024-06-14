@@ -1,4 +1,4 @@
-package com.gkmobile.ketik.akun
+package com.gkmobile.ketik.akun.componen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
