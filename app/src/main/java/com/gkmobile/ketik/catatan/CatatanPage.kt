@@ -6,7 +6,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -112,17 +114,19 @@ Column (
 
             }
 
-Column(modifier = Modifier.padding(top = 200.dp)) {
-
-}
+        }
+        Column(
+            modifier = Modifier.fillMaxHeight().fillMaxWidth().padding(end = 15.dp, bottom = 7.dp),
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.End
+            ) {
             Image(
                 painter = painterResource(id = R.drawable.create),
-                contentDescription = "CreateCatatan"
+                contentDescription = "CreateCatatan",
+                modifier = Modifier.size(43.dp)
             )
         }
-
     }
-
 }
 
 
