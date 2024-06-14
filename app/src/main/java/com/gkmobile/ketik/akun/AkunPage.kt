@@ -27,7 +27,7 @@ import com.gkmobile.ketik.akun.component.SummitCostom
 
 
 @Composable
-fun AkunPage () {
+fun AkunPage ( ) {
     Column (
         modifier = Modifier.fillMaxSize()
 
