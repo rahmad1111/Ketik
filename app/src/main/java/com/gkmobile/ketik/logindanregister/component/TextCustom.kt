@@ -3,6 +3,7 @@ package com.gkmobile.ketik.logindanregister.component
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material3.Text
@@ -18,14 +19,14 @@ import com.gkmobile.ketik.ui.theme.Rubik
 
 // Untuk Text Satu Buat Semua
 @Composable
-fun TextCostum(
+fun MengostumTeks(
     conten:String,
-    size:Int,
-    tipefont:FontFamily,
-    fontweight:FontWeight,
-    letaktext:TextAlign,
-    color:Color,
-    paddingValues: PaddingValues
+    size:Int = 16, // Ukuran default
+    tipefont:FontFamily = FontFamily.Default, // Font default
+    fontweight:FontWeight = FontWeight.Normal, // FontWeight default
+    letaktext:TextAlign = TextAlign.Start, // TextAlign default
+    color:Color = Color.Black, // Warna default
+    paddingValues: PaddingValues = PaddingValues(0.dp) // Padding default
 ) {
     Text(
         text = conten,
@@ -34,14 +35,14 @@ fun TextCostum(
         fontSize = size.sp,
         color = color,
         textAlign = letaktext,
-        modifier = Modifier.fillMaxWidth().padding(paddingValues)
+        modifier = Modifier.padding(paddingValues)
     )
 }
 
 @Preview(showBackground = true)
 @Composable
 private fun PreviewTextCostum() {
-    TextCostum(
+    MengostumTeks(
         conten = "Register",
         size = 24,
         tipefont = Rubik,
