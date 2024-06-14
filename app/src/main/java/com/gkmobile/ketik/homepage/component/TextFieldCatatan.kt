@@ -59,8 +59,8 @@ fun TextFieldCatatan(
                             Abu_abu, RoundedCornerShape(7.dp)
                         )
                         .padding(start = 10.dp, top = 7.dp, end = 10.dp)
-                        .height(26.dp)
-                        .width(270.dp)
+                        .height(27.dp)
+                        .width(310.dp)
                 ) {
 
                 }
