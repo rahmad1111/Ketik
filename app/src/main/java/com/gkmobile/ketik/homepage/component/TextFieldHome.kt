@@ -55,7 +55,7 @@ fun TextFieldHome(
                 Column(
                     modifier = Modifier
                         .background(
-                            Biru_tua, RoundedCornerShape(17.dp)
+                            Biru, RoundedCornerShape(17.dp)
                         )
                         .padding(start = 10.dp, top = 7.dp, end = 10.dp)
                         .height(29.dp)
