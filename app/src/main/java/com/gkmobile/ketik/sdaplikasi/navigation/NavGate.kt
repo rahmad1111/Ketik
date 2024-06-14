@@ -1,5 +1,6 @@
 package com.gkmobile.ketik.sdaplikasi.navigation
 
+import android.security.AttestedKeyPair
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -22,6 +23,8 @@ fun NavGate() {
 
         composable(route = Navigasi.Login.route){
             LoginPage()
+
         }
+
     }
 }
