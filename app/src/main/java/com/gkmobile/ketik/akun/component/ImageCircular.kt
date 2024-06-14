@@ -1,11 +1,11 @@
-package com.gkmobile.ketik.akun
+package com.gkmobile.ketik.akun.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,9 +24,10 @@ fun ImageCustomCirCular(
     shape: Shape
 ) {
     Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
+        modifier = Modifier,
+        horizontalAlignment = Alignment.Start,
+    )
+     {
         Image(
             painter = painterResource(id = painter),
             contentDescription = "Logo",
