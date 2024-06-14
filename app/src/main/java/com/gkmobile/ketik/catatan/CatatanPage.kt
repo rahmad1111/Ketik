@@ -2,6 +2,7 @@
 package com.gkmobile.ketik.catatan
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -123,7 +124,7 @@ Column (
             Image(
                 painter = painterResource(id = R.drawable.create),
                 contentDescription = "CreateCatatan",
-                modifier = Modifier.size(43.dp)
+                modifier = Modifier.size(43.dp).clickable {  }
             )
         }
     }
