@@ -2,6 +2,7 @@ package com.gkmobile.ketik.sdaplikasi.datastorepreferences
 
 import android.content.Context
 import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.EMAIL
+import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.KATASANDIREGISTER
 import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.KATA_SANDI
 import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.NAMA_LENGKAP
 import com.gkmobile.ketik.sdaplikasi.datastorepreferences.PreferencesKey.NAMA_PREF
@@ -28,9 +29,16 @@ class SharedPreferencesManager(context: Context) {
             editor.putString(KATA_SANDI, value)
             editor.commit()
         }
+    var passwordregister
+        get() = preferences.getString(KATASANDIREGISTER,"")
+        set(value) {
+            editor.putString(KATASANDIREGISTER,value)
+            editor.commit()
+        }
 }
 
 // cara ambil ke ui
+// val context = LocalContext.current
 // val sharedPreferencesManager = remember {
 //        SharedPreferencesManager(context)
 //    }

@@ -8,6 +8,11 @@ import androidx.lifecycle.ViewModel
 class Logiclogin : ViewModel(){
     var email = mutableStateOf("")
     var password = mutableStateOf("")
+    var passwordregister = mutableStateOf("")
+    var nama = mutableStateOf("")
+    var showError = mutableStateOf(false)
+    var showErrore = mutableStateOf(false)
+
 
     private lateinit var context: Context
 //    private val _toastMessage = MutableStateFlow<String?>(null)

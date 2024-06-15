@@ -5,4 +5,5 @@ object PreferencesKey {
     const val NAMA_LENGKAP = "namalengkap"
     const val EMAIL = "email"
     const val KATA_SANDI = "katasandi"
+    const val KATASANDIREGISTER = "katasandiregister"
 }

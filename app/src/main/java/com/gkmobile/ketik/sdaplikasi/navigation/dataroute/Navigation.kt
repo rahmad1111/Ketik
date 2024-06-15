@@ -11,5 +11,6 @@ sealed class Navigasi(
     data object Register:Navigasi("Register")
 
     // ---- Home Bottombar
+    data object Home : Navigasi("home")
 
 }
