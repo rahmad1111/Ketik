@@ -113,7 +113,7 @@ fun LoginPage (navController: NavController){
         Snackbar(
             modifier = Modifier.padding(start = 16.dp, top = 360.dp, end = 16.dp, bottom = 360.dp)
         ) {
-            Text(text = "Ada yang belum diisi", fontSize = 20.sp)
+            Text(text = "Password Belum diisi", fontSize = 20.sp)
         }
         LaunchedEffect(showError) {
             delay(2000L)
