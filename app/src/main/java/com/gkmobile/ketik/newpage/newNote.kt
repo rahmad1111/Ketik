@@ -21,20 +21,23 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.gkmobile.ketik.morecomponent.HeaderCustom
+import com.gkmobile.ketik.sdaplikasi.navigation.dataroute.Navigasi
 import com.gkmobile.ketik.ui.theme.KetikTheme
 
 @Composable
-fun newNote() {
+fun newNote(navController: NavController) {
     Scaffold(
         topBar = {
             Box {
                 HeaderCustom(
                     textdepan = "Batal",
-                    onClickdepan = { /*TODO*/ },
+                    onClickdepan = { navController.navigate(Navigasi.CatatanPage.route) },
                     texttengah = "Catatan Baru",
                     textbelakang = "Selesai",
-                    onClickbelakang = {}
+                    onClickbelakang = { navController.navigate(Navigasi.CatatanPage.route) }
                 )
                 Divider(
                     color = Color.Gray,
@@ -78,6 +81,6 @@ fun FolderNameInput() {
 @Composable
 private fun NewFolderScreenPreview() {
     KetikTheme {
-        newNote()
+        newNote(navController = rememberNavController())
     }
 }

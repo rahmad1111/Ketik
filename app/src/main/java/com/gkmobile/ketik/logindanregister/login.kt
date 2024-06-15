@@ -40,7 +40,7 @@ import com.gkmobile.ketik.ui.theme.Putih
 import kotlinx.coroutines.delay
 
 @Composable
-fun Login (navController: NavController){
+fun LoginPage (navController: NavController){
     val logiclogin: Logiclogin = viewModel()
     var showError by remember {
         mutableStateOf(false)
@@ -83,8 +83,10 @@ fun Login (navController: NavController){
                     if (passwordregister.isBlank()){
                         navController.navigate(Navigasi.Register.route)
                     } else
-                        if (passwordregister == logiclogin.password.value){
+                        if (passwordregister != logiclogin.password.value){
                             showError = true
+                        } else{
+                            navController.navigate(Navigasi.Register.route)
                         }
                 }
         )
@@ -92,10 +94,11 @@ fun Login (navController: NavController){
         ButtonCostum(
             conten = "Login",
             onClick = {
-                if (logiclogin.password.value == passwordregister){
-                    navController.navigate(Navigasi.Home.route)
-                } else{
+                if (logiclogin.password.value != passwordregister){
                     showError = true
+                } else{
+                    navController.navigate(Navigasi.Home.route)
+
                 }
             },
             textcolor = Biru,
@@ -125,5 +128,5 @@ fun Login (navController: NavController){
 @Preview(showBackground = true , )
 @Composable
 private fun PreviewLogin() {
-    Login(navController = rememberNavController() )
+    LoginPage(navController = rememberNavController() )
 }

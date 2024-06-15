@@ -3,6 +3,7 @@ package com.gkmobile.ketik.newpage
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.Divider
 import androidx.compose.material3.FloatingActionButton
@@ -21,21 +22,28 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.gkmobile.ketik.R
 import com.gkmobile.ketik.morecomponent.HeaderCustom
+import com.gkmobile.ketik.sdaplikasi.navigation.dataroute.Navigasi
 import com.gkmobile.ketik.ui.theme.KetikTheme
 
 @Composable
-fun notepad() {
+fun notepad(navController: NavController) {
     Scaffold(
         topBar = {
             Box {
                 HeaderCustom(
                     textdepan = "Catatan",
-                    onClickdepan = {},
+                    onClickdepan = {
+                                   navController.navigate(Navigasi.CatatanPage.route)
+                    },
                     texttengah = "",
                     textbelakang = "Selesai",
-                    onClickbelakang = {}
+                    onClickbelakang = {
+                        navController.navigate(Navigasi.CatatanPage.route)
+                    }
                 )
                 Divider(
                     color = Color.Gray,
@@ -46,7 +54,7 @@ fun notepad() {
         },
         floatingActionButton = {
             FloatingActionButton(onClick = { /*TODO*/ }) {
-                Icon(painter = painterResource(id = R.drawable.share_rounded), contentDescription = "save")
+                Icon(painter = painterResource(id = R.drawable.share_rounded), contentDescription = "save", modifier = Modifier.size(30.dp))
             }
         }
     ) { contentPadding ->
@@ -79,6 +87,6 @@ fun noteContent() {
 @Composable
 private fun notepadPrev() {
     KetikTheme {
-        notepad()
+        notepad(navController = rememberNavController())
     }
 }

@@ -1,5 +1,6 @@
 package com.gkmobile.ketik.akun
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.DragInteraction
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -19,15 +20,20 @@ import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.platform.InspectableModifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.gkmobile.ketik.R
 import com.gkmobile.ketik.akun.componen.ImageCustomCirCular
 import com.gkmobile.ketik.akun.componen.OutlineText
 import com.gkmobile.ketik.akun.componen.ProfilText
 import com.gkmobile.ketik.akun.componen.SummitCostom
+import com.gkmobile.ketik.sdaplikasi.navigation.dataroute.Navigasi
 
 
 @Composable
-fun AkunPage ( ) {
+fun AkunPage (
+    navController: NavController
+) {
     Column (
         modifier = Modifier.fillMaxSize()
 
@@ -35,7 +41,11 @@ fun AkunPage ( ) {
     {
         Row (modifier = Modifier.padding(start = 20.dp, top = 43.dp, bottom = 0.dp )){
             Spacer(modifier = Modifier.padding(bottom= 14.dp))
-            ProfilText(text = "Profil")
+            Column(
+                modifier = Modifier.clickable { navController.navigate(Navigasi.Home.route) }
+            ) {
+                ProfilText(text = "Profil")
+            }
         }
 
         Row (modifier = Modifier.padding(start = 44.dp, top = 20.dp)){
@@ -69,6 +79,6 @@ fun AkunPage ( ) {
 @Preview(showBackground = true)
 @Composable
 private fun PreviewAkunPage() {
-    AkunPage()
+    AkunPage(navController = rememberNavController())
 }
 

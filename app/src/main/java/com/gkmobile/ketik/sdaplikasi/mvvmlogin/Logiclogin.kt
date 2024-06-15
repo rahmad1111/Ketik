@@ -12,6 +12,7 @@ class Logiclogin : ViewModel(){
     var nama = mutableStateOf("")
     var showError = mutableStateOf(false)
     var showErrore = mutableStateOf(false)
+    var pencarian = mutableStateOf("")
 
 
     private lateinit var context: Context

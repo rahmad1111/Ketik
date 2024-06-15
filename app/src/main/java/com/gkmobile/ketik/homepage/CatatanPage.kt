@@ -33,6 +33,7 @@ import com.gkmobile.ketik.R
 import com.gkmobile.ketik.homepage.component.CardCustom
 import com.gkmobile.ketik.homepage.component.TextFieldCatatan
 import com.gkmobile.ketik.morecomponent.HeaderCustom
+import com.gkmobile.ketik.sdaplikasi.navigation.dataroute.Navigasi
 import com.gkmobile.ketik.ui.theme.Abu_abu_gelap
 import com.gkmobile.ketik.ui.theme.Biru
 import com.gkmobile.ketik.ui.theme.Inter
@@ -57,7 +58,9 @@ fun CatatanPage(navController: NavController) {
 
         HeaderCustom(
             textdepan = "Folder",
-            onClickdepan = {},
+            onClickdepan = {
+                           navController.navigate(Navigasi.Home.route)
+            },
             texttengah = "",
             textbelakang = "",
             onClickbelakang = {})
@@ -90,11 +93,14 @@ fun CatatanPage(navController: NavController) {
         {
 
             Column {
-
-                CardCustom(
-                    colors = CardDefaults.cardColors(Peach),
-                    text = "Tanggal Gajian"
-                )
+                Column(
+                    modifier = Modifier.clickable { navController.navigate(Navigasi.Notepad.route) }
+                ) {
+                    CardCustom(
+                        colors = CardDefaults.cardColors(Peach),
+                        text = "Tanggal Gajian"
+                    )
+                }
                 Spacer(modifier = Modifier.height(8.dp))
                 CardCustom(
                     colors = CardDefaults.cardColors(Teal),
@@ -117,14 +123,19 @@ fun CatatanPage(navController: NavController) {
 
         }
         Column(
-            modifier = Modifier.fillMaxHeight().fillMaxWidth().padding(end = 15.dp, bottom = 7.dp),
+            modifier = Modifier
+                .fillMaxHeight()
+                .fillMaxWidth()
+                .padding(end = 15.dp, bottom = 7.dp),
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.End
         ) {
             Image(
                 painter = painterResource(id = R.drawable.create),
                 contentDescription = "CreateCatatan",
-                modifier = Modifier.size(43.dp).clickable {  }
+                modifier = Modifier
+                    .size(43.dp)
+                    .clickable { navController.navigate(Navigasi.NewNote.route) }
             )
         }
     }

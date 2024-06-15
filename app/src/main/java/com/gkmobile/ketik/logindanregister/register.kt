@@ -76,7 +76,7 @@ fun register(navController: NavController){
         TextFieldPassword(
             value = logiclogin.passwordregister.value ,
             onValueChange = {
-                            logiclogin.password.value
+                            logiclogin.passwordregister.value = it
             } ,
             label = "Password",
             keyboardType = KeyboardType.Password
@@ -85,7 +85,7 @@ fun register(navController: NavController){
         TextFieldPassword(
             value = logiclogin.passwordregister.value,
             onValueChange = {
-                            logiclogin.password.value
+                            logiclogin.passwordregister.value = it
             } ,
             label = "Konfirmasi password",
             keyboardType = KeyboardType.Email
@@ -98,7 +98,7 @@ fun register(navController: NavController){
                           logiclogin.showErrore.value = true
                       } else {
                           sharedPreferencesManager.passwordregister = logiclogin.passwordregister.value
-                          navController.navigate(Navigasi.Home.route)
+                          navController.navigate(Navigasi.Login.route)
                       }
             },
             textcolor = Biru,

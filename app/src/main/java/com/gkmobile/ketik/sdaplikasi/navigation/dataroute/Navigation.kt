@@ -13,4 +13,10 @@ sealed class Navigasi(
     // ---- Home Bottombar
     data object Home : Navigasi("home")
 
+    data object CatatanPage : Navigasi("catatanpage")
+    data object Notepad : Navigasi("notepad")
+    data object NewFolder : Navigasi("newfolder")
+    data object NewNote : Navigasi("newnote")
+    data object Profile : Navigasi("profile")
+
 }
