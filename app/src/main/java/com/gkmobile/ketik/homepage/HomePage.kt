@@ -10,8 +10,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,6 +26,7 @@ import com.gkmobile.ketik.R
 import com.gkmobile.ketik.homepage.component.Folder
 import com.gkmobile.ketik.homepage.component.TextFieldHome
 import com.gkmobile.ketik.logindanregister.component.ImageCustom
+import com.gkmobile.ketik.sdaplikasi.datastorepreferences.SharedPreferencesManager
 import com.gkmobile.ketik.sdaplikasi.mvvmlogin.Logiclogin
 import com.gkmobile.ketik.sdaplikasi.navigation.dataroute.Navigasi
 import com.gkmobile.ketik.ui.theme.Biru
@@ -34,6 +37,11 @@ import com.gkmobile.ketik.ui.theme.Inter
 @Composable
 fun     HomePage(navController: NavController) {
     val logiclogin: Logiclogin = viewModel()
+    val context = LocalContext.current
+    val sharedPreferencesManager = remember {
+        SharedPreferencesManager(context)
+    }
+    val namamalengkap = sharedPreferencesManager.namalengkap ?: ""
     Column(
         modifier = Modifier.fillMaxSize()
     )
@@ -55,7 +63,7 @@ fun     HomePage(navController: NavController) {
                     )
                 )
                 Text(
-                    text = "Prabroro!",
+                    text = namamalengkap,
                     fontFamily = Inter,
                     fontWeight = FontWeight.Bold,
                     fontSize = 26.sp,

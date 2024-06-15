@@ -48,7 +48,7 @@ fun register(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize()
     ){
-        Spacer(modifier = Modifier.size(100.dp))
+        Spacer(modifier = Modifier.size(86.dp))
         ImageCustom(painter = R.drawable.logojadi, size =130 )
         Spacer(modifier = Modifier.size(32.dp))
         Text(text = "Register",fontSize =24.sp, fontWeight =FontWeight.Bold, textAlign = TextAlign.Start, modifier= Modifier
@@ -90,7 +90,7 @@ fun register(navController: NavController){
             label = "Konfirmasi password",
             keyboardType = KeyboardType.Email
         )
-        Spacer(modifier = Modifier.size(44.dp))
+        Spacer(modifier = Modifier.size(38.dp))
         ButtonCostum(
             conten = "Login",
             onClick = {
@@ -98,6 +98,7 @@ fun register(navController: NavController){
                           logiclogin.showErrore.value = true
                       } else {
                           sharedPreferencesManager.passwordregister = logiclogin.passwordregister.value
+                          sharedPreferencesManager.namalengkap = logiclogin.nama.value
                           navController.navigate(Navigasi.Login.route)
                       }
             },
