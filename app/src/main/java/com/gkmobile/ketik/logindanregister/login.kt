@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Snackbar
@@ -110,19 +111,15 @@ fun LoginPage (navController: NavController){
     }
     if (showError){
         Snackbar(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(start = 16.dp, top = 360.dp, end = 16.dp, bottom = 360.dp)
         ) {
-            Text(text = "Ada yang belum diisi")
+            Text(text = "Ada yang belum diisi", fontSize = 20.sp)
         }
         LaunchedEffect(showError) {
             delay(2000L)
             showError = false
         }
     }
-
-
-
-
 }
 
 @Preview(showBackground = true , )

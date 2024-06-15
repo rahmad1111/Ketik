@@ -117,9 +117,9 @@ fun register(navController: NavController){
     }
     if (logiclogin.showErrore.value){
         Snackbar(
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(start = 16.dp, top = 360.dp, end = 16.dp, bottom = 360.dp)
         ) {
-            Text(text = "Data Ada yang Kosong")
+            Text(text = "Data Ada yang Kosong", fontSize = 20.sp)
         }
         LaunchedEffect(logiclogin.showErrore.value) {
             delay(2000L)
