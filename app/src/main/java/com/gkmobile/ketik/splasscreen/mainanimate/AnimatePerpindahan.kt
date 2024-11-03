@@ -19,7 +19,12 @@ fun AnimateSplash(
     LaunchedEffect(Unit) {
         coroutineScope.launch {
             delay(2000L)
-            navController.navigate(Navigasi.Login.route)
+            navController.navigate(Navigasi.Login.route){
+                // agar tidak kembali ke splash
+                popUpTo(Navigasi.SplashScreen.route){
+                    inclusive = true
+                }
+            }
         }
     }
     SplashScreen()
